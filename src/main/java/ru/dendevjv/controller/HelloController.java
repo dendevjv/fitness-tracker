@@ -9,6 +9,7 @@ public class HelloController {
     @RequestMapping(value="/greeting")
     public String sayHello(Model model) {
         
+        model.addAttribute("title", "Spring MVC app");
         model.addAttribute("greeting", "Hello world (controller: HelloController)");
         
         return "hello";
